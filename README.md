@@ -4,11 +4,62 @@ Ceci est un début de projet pour Symfony 4
 
 ## Lancement local
 
+### installation des dépendances
+
 ```bash
 cd src
 composer install
+```
+
+### Configuration de la DB
+
+modifier le fichier .env
+
+### Création de la DB locale
+
+```bash
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:fixtures:load
+```
+
+### Lancer le serveur local
+
+```bash
 php bin/console server:run --docroot=public
 ```
+
+## Outils de développement/intégration/tests/...
+
+### PHP-CS-Fixer
+
+#### Installer
+
+```bash
+composer global require friendsofphp/php-cs-fixer
+```
+
+#### Executer
+
+```bash
+php-cs-fixer fix src
+```
+
+
+### PHP CodeSniffer
+
+#### Installer
+
+```bash
+composer global require "squizlabs/php_codesniffer=*"
+```
+
+#### Executer
+
+```bash
+php-cs-fixer fix src
+```
+
 
 ## Contribution
 Des pull requests sont les bienvenus. Pour des modifications plus importantes, merci de faire une issue qu'on en discute avant.
