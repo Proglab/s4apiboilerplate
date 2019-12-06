@@ -57,7 +57,7 @@ composer global require "squizlabs/php_codesniffer=*"
 #### Executer
 
 ```bash
-php-cs-fixer fix src
+phpcs src
 ```
 
 
